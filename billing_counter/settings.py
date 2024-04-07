@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 # Import dj-database-url at the beginning of the file.
 import dj_database_url
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -96,7 +96,7 @@ AUTH_USER_MODEL = ''
     
 # }
 DATABASES ={
-    "default":dj_database_url.parse("postgres://my_pgdb_user:x3EVM8e3OvTLbikznx5EGs0V57RWzAQ0@dpg-co9c69sf7o1s7396aapg-a.oregon-postgres.render.com/my_pgdb")
+    "default":dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 AUTH_USER_MODEL = 'on_counter_billing.CustomUser'
 
