@@ -84,7 +84,7 @@ AUTH_USER_MODEL = ''
 #         default='postgres://my_pgdb_user:x3EVM8e3OvTLbikznx5EGs0V57RWzAQ0@dpg-co9c69sf7o1s7396aapg-a.oregon-postgres.render.com/my_pgdb',
 #         conn_max_age=600
 #     )
-
+# }
     # {
     #     'ENGINE': 'django.db.backends.postgresql',
     #     'NAME': 'my_pgdb',
@@ -96,7 +96,8 @@ AUTH_USER_MODEL = ''
     
 # }
 DATABASES ={
-    "default":dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    "default":dj_database_url.parse(os.environ.get("postgres://my_pgdb_user:x3EVM8e3OvTLbikznx5EGs0V57RWzAQ0@dpg-co9c69sf7o1s7396aapg-a.oregon-postgres.render.com/my_pgdb"))
+
 }
 AUTH_USER_MODEL = 'on_counter_billing.CustomUser'
 
