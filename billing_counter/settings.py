@@ -79,12 +79,12 @@ AUTH_USER_MODEL = ''
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default='postgres://my_pgdb_user:x3EVM8e3OvTLbikznx5EGs0V57RWzAQ0@dpg-co9c69sf7o1s7396aapg-a.oregon-postgres.render.com/my_pgdb',
-#         conn_max_age=600
-#     )
-# }
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgres://my_pgdb_user:x3EVM8e3OvTLbikznx5EGs0V57RWzAQ0@dpg-co9c69sf7o1s7396aapg-a.oregon-postgres.render.com/my_pgdb',
+        conn_max_age=600
+    )
+}
     # {
     #     'ENGINE': 'django.db.backends.postgresql',
     #     'NAME': 'my_pgdb',
@@ -95,10 +95,10 @@ AUTH_USER_MODEL = ''
     # }
     
 # }
-DATABASES ={
-    "default":dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# DATABASES ={
+#     "default":dj_database_url.parse(os.environ.get("DATABASE_URL"))
 
-}
+# }
 AUTH_USER_MODEL = 'on_counter_billing.CustomUser'
 
 # Password validation
